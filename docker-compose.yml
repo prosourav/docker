@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: mycustom-image-name
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/src/app  
+
+# docker compose up -d
+# docker compose down
+# docker compose ps
+# docker compose build
+
+# should build image again if change anything rather than papckage.json
